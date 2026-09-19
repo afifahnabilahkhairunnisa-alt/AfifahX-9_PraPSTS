@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Computer Lab</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    < class="bg-purple-300 w-full max-w-full p-8 rounded-2xl shadow-lg">
+        <header class="bg-blue-600 text-white p-8">
+    <h1 class="text-4xl font-bold">
+        Computer Lab Reservation System
+    </h1>
+
+    <p class="text-xl mt-3">
+        School Computer Laboratory Reservation Form
+    </p>
+</header>
+<main class="max-w-full mx-auto p-8">
+
+    <div class="bg-white p-8 rounded-xl shadow-lg">
+
+   <h2 class="text-3xl font-bold text-gray-800">
+    Lab Reservation Form
+</h2>
+
+<p class="text-gray-500 mt-2 mb-8">
+    Please complete the form below to reserve the computer laboratory.
+</p> 
+
+        <form>
+            <label class="block font-semibold text-gray-700 mb-2">
+                Borrower's Name
+            </label>
+            <input type="text" placeholder=" Enter your name" class="w-full border border-gray-300 rounded-lg p-3 mb-4"
+            >
+           <label>Nama</label>
+
+<input type="text">
+<label class="block font-semibold text-gray-700 mb-2">
+    Status
+</label>
+
+<div class="flex gap-4 mb-4">
+
+    <label>
+        <input type="radio" name="status">
+        Teacher
+    </label>
+
+    <label>
+        <input type="radio" name="status">
+        Student
+    </label>
+
+    <label>
+        <input type="radio" name="status">
+        Organization
+    </label>
+
+</div>
+<label class="block font-semibold text-gray-700 mb-2">
+    Purpose
+</label>
+
+<input
+    type="text"
+    placeholder="Practicum, Practice, OSIS Meeting, etc."
+    class="w-full border border-gray-300 rounded-lg p-3 mb-4"
+>
+<label class="block font-semibold text-gray-700 mb-2">
+    Borrowed Lab
+</label>
+
+<div class="flex gap-4 mb-4">
+
+    <label>
+        <input type="radio" name="lab">
+        Lab 1 (Software)
+    </label>
+
+    <label>
+        <input type="radio" name="lab">
+        Lab 2 (Hardware)
+    </label>
+
+</div>
+<label class="block font-semibold text-gray-700 mb-2">
+    Date of Use
+</label>
+
+<input
+    type="date"
+    class="w-full border border-gray-300 rounded-lg p-3 mb-4"
+>
+<label class="block font-semibold text-gray-700 mb-2">
+    Start Time
+</label>
+
+<input
+    type="time"
+    class="w-full border border-gray-300 rounded-lg p-3 mb-4"
+>
+<label class="block font-semibold text-gray-700 mb-2">
+    End Time
+</label>
+
+<input
+    type="time"
+    class="w-full border border-gray-300 rounded-lg p-3 mb-4"
+>
+<label class="block font-semibold text-gray-700 mb-2">
+    Number of Participants
+</label>
+
+<input
+    type="number"
+    min="1"
+    placeholder="Enter number of participants"
+    class="w-full border border-gray-300 rounded-lg p-3 mb-4"
+>
+<label class="block font-semibold text-gray-700 mb-2">
+    Special Requirements
+</label>
+
+<textarea
+    placeholder="Need internet access, need a projector, etc."
+    class="w-full border border-gray-300 rounded-lg p-3 mb-6"
+    rows="4"
+></textarea>
+<button
+    type="submit"
+    class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700"
+>
+    Submit Reservation
+</button>
+        </form>
+    </div>
+</main>
+    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
